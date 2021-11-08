@@ -24,10 +24,8 @@ const player = {
     percentage_three_points : 5,
 }
 
-// functions
-
+// FUNCTIONS
 // player code generation
-// il codice giocatore deve essere formato da 3 lettere maiuscole casuali e 3 cifre casuali
 function player_code_geration() {
 
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
@@ -48,13 +46,21 @@ function player_code_geration() {
     }
     return code;
 }
-console.log(player_code_geration());
+console.log( player_code_geration() );
 
 // game point average generation
-
-
+function game_average() {
+    const average = Math.floor( Math.random(0) * 50 );
+    return average
+}
+console.log( game_average() );
 // percentage three points generation
-
+function percentage_three_points_generation() {
+    const random_number = Math.floor( Math.random(0) * 100 );
+    const percentage = (100 * random_number) / 100;
+    return String( percentage + '%' );
+}
+console.log( percentage_three_points_generation() );
 
 
 // game statistics generation
