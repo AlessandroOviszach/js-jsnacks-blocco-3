@@ -29,26 +29,25 @@ const player = {
 // player code generation
 // il codice giocatore deve essere formato da 3 lettere maiuscole casuali e 3 cifre casuali
 function player_code_geration() {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const numbers = '0123456789';
-    let letter_part,
-        numbers_part,
-        code;
-    // const charactersLength = characters.length;
+
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+          numbers = '0123456789';
+    let letter_part = '',
+    numbers_part = '',
+    code = '';
 
     // generation of 3 letters
     for ( let i = 0; i < 3; i++ ) {
+        // generazione random di 3 lettere 
         letter_part += characters.charAt(Math.floor(Math.random() * characters.length));
+        // generazione random di 3 numeri
         numbers_part += numbers.charAt(Math.floor(Math.random() * numbers.length));
-        code = letter_part + numbers_part;
 
+        // concatenazione delle variabili precedenti per la creazione del codice
+        code = letter_part + numbers_part;
     }
-    
-    console.log(letter_part);
-    console.log(numbers_part);
     return code;
 }
-
 console.log(player_code_geration());
 
 // game point average generation
