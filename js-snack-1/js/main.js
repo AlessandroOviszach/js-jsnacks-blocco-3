@@ -54,7 +54,7 @@ function game_average() {
 function percentage_three_points_generation() {
     const random_number = Math.floor( Math.random(0) * 100 );
     const percentage = (100 * random_number) / 100;
-    return String( percentage + '%' );
+    return percentage;
 }
 // player data printing
 function player_data_printing() {
@@ -148,30 +148,17 @@ const players = [
     },
 ]
 
-
-
-const player1 = {
-    player_code : player_code_generation(),
-    name : 'Player_name',
-    surname : 'Player_surname',
-    age : 30,
-    game_points_average : game_average(),
-    percentage_three_points : percentage_three_points_generation(),
-}
+// creazione di un'array filtrato
+const top_player = players.filter( (player) => player.game_points_average > 35 && player.percentage_three_points > 80)
 
 
 
-
-
-
-
-
-
-// console log delle funzioni
-console.log( player_code_generation() );
-console.log( game_average() );
-console.log( percentage_three_points_generation() );
-console.log( player_data_printing() );
+// // console log delle funzioni
+// console.log( player_code_generation() );
+// console.log( game_average() );
+// console.log( percentage_three_points_generation() );
+// console.log( player_data_printing() );
+// console.table(top_player);
 
 
 
